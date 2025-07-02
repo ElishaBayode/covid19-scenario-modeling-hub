@@ -493,6 +493,13 @@ modeling efforts in the [auxiliary-data/](./auxiliary-data/) folder:
 For more information, please consult the associated 
 [README file](./auxiliary-data/README.md).
 
+## Round information
+
+The repository also contains round information in a 
+[rounds/](./auxiliary-data/rounds) folder:
+
+- [Round 19](./auxiliary-data/rounds/round19.md)
+
 
 ## Ensemble model
 
