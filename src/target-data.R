@@ -61,43 +61,43 @@ number2season <- setNames(gsub("-", "-20", seasons_info$label),
 
 
 # FluView COVID-19 Death Data --------------------------------------------------
-#user_agent_info <-
-#  paste0("Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 ",
-#         "(KHTML, like Gecko) Chrome/111.0.0.0 Safari/537.36")
-#headers <- c(`authority` = "gis.cdc.gov",
-#             `accept` = "application/json, text/plain, */*",
-#             `accept-language` = "en-US,en;q=0.9",
-#             `cache-control` = "no-cache",
-#             `content-type` = "application/json;charset=UTF-8",
-#             `origin` = "https://gis.cdc.gov",
-#             `pragma` = "no-cache",
-#             `referer` = "https://gis.cdc.gov/grasp/fluview/mortality.html",
-#             `sec-ch-ua` = paste0('"Google Chrome";v="111", ',
-#                                  '"Not(A:Brand";v="8", "Chromium";v="111"'),
-#             `sec-ch-ua-mobile` = "?0",
-#             `sec-ch-ua-platform` = '"macOS"',
-#             `sec-fetch-dest` = "empty",
-#             `sec-fetch-mode` = "cors",
-#             `sec-fetch-site` = "same-origin",
-#             `user-agent` = user_agent_info)
-#state_fv_data <- paste0('{"AppVersion":"Public","AreaParameters":[{"ID":2}],',
-#                        '"SeasonsParameters":[', seasons_param,
-#                        '],"AgegroupsParameters":[{"ID":1}]}')
-#fv_data <- paste0('{"AppVersion":"Public","AreaParameters":[{"ID":1}],',
-#                  '"SeasonsParameters":[', seasons_param,
-#                  '],"AgegroupsParameters":[{"ID":1}]}')
-#url <- "https://gis.cdc.gov/grasp/flu7/PostPhase07DownloadData"
-#
-## Add NY City for COVID-19 Death data (source FluView)
-#number2location <- c(number2location, setNames("New York City", 57))
-#
-## Extract and standardized data
-#df_state <- fluview_data(headers, state_fv_data, "state", number2location, url)
-#df_us <- fluview_data(headers, fv_data, "US", number2location, url)
-#
-#df_death <- standard_fluview(df_us, df_state, number2season,
-#                             end_date = limit_date - 28) |>
-#  dplyr::mutate(age_group = "0-130", target = "inc death")
+user_agent_info <-
+  paste0("Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 ",
+         "(KHTML, like Gecko) Chrome/111.0.0.0 Safari/537.36")
+headers <- c(`authority` = "gis.cdc.gov",
+             `accept` = "application/json, text/plain, */*",
+             `accept-language` = "en-US,en;q=0.9",
+             `cache-control` = "no-cache",
+             `content-type` = "application/json;charset=UTF-8",
+             `origin` = "https://gis.cdc.gov",
+             `pragma` = "no-cache",
+             `referer` = "https://gis.cdc.gov/grasp/fluview/mortality.html",
+             `sec-ch-ua` = paste0('"Google Chrome";v="111", ',
+                                  '"Not(A:Brand";v="8", "Chromium";v="111"'),
+             `sec-ch-ua-mobile` = "?0",
+             `sec-ch-ua-platform` = '"macOS"',
+             `sec-fetch-dest` = "empty",
+             `sec-fetch-mode` = "cors",
+             `sec-fetch-site` = "same-origin",
+             `user-agent` = user_agent_info)
+state_fv_data <- paste0('{"AppVersion":"Public","AreaParameters":[{"ID":2}],',
+                        '"SeasonsParameters":[', seasons_param,
+                        '],"AgegroupsParameters":[{"ID":1}]}')
+fv_data <- paste0('{"AppVersion":"Public","AreaParameters":[{"ID":1}],',
+                  '"SeasonsParameters":[', seasons_param,
+                  '],"AgegroupsParameters":[{"ID":1}]}')
+url <- "https://gis.cdc.gov/grasp/flu7/PostPhase07DownloadData"
+
+# Add NY City for COVID-19 Death data (source FluView)
+number2location <- c(number2location, setNames("New York City", 57))
+
+# Extract and standardized data
+df_state <- fluview_data(headers, state_fv_data, "state", number2location, url)
+df_us <- fluview_data(headers, fv_data, "US", number2location, url)
+
+df_death <- standard_fluview(df_us, df_state, number2season,
+                             end_date = limit_date - 28) |>
+  dplyr::mutate(age_group = "0-130", target = "inc death")
 
 # NHSN Hospitalization Data ----------------------------------------------------
 df_nhsn <- extract_nhsn(hosp_report = TRUE, pathogen = "COVID") |>
@@ -113,11 +113,11 @@ arch_files <-
 file.copy(old_files, arch_files)
 
 # Write output -----------------------------------------------------------------
-write.csv(df_nhsn, #rbind(df_death, df_nhsn),
+write.csv(rbind(df_death, df_nhsn),
           "target-data/time-series.csv",
           row.names = FALSE)
 
-write.csv(df_nhsn, # rbind(df_death, df_nhsn),
+write.csv(rbind(df_death, df_nhsn),
           paste0("auxiliary-data/target-data_archive/time-series_", Sys.Date(),
                  ".csv"),
           row.names = FALSE)
