@@ -26,3 +26,23 @@ is 0% in all age and risk groups in the 2025-26 season
 The data is available at state and national level, for multiple age groups (6mo-17, 
 18-49, 50-64, 65+) and risk group (high-risk, low-risk, overall). The data are
 expressed by epiweek (week starting Sunday) and scenario.
+
+## Observed Data
+
+The 
+[Weekly Parental Intent for Vaccination and Cumulative Percentage of Children 6 Months -17 Years Who are Up to date with the COVID-19 Vaccines by Season](https://data.cdc.gov/Child-Vaccinations/Weekly-Parental-Intent-for-Vaccination-and-Cumulat/ker6-gs6z/about_data)
+and the
+[COVID-19 Vaccination Coverage, Overall and by Selected Demographics and Jurisdiction, Among Adults 18 Years and Older, by Season](https://data.cdc.gov/Vaccinations/COVID-19-Vaccination-Coverage-Overall-and-by-Selec/ksfb-ug5d/about_data)
+is also downloaded weekly and stored in the [vax_cov](./vax_cov/) folder in CSV files 
+with the download date added in the name of the files. Past files are stored in an 
+[archive](./vax_cov/archive) folder.
+
+> Weekly estimates of COVID-19 vaccination coverage and parental intent for vaccination among children 
+through December 31, 2023, were calculated using data from the National Immunization Survey-Child COVID 
+Module (NIS-CCM). (https://www.cdc.gov/nis/about/index.html).
+
+> Weekly estimates of COVID-19 vaccination coverage and intent for vaccination among adults are 
+calculated using data from the National Immunization Surveys (NIS)-Fall Respiratory Virus 
+Module (NIS-FRVM) (https://www.cdc.gov/nis/about/index.html). 
+
+
