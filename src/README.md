@@ -2,11 +2,14 @@
 
 This folder stores code that is use in the Github Repository, including:
 
-- Target Data: code to extract and standardized target time series data.
+- Target Data: R code to extract and standardized target time series data.
     - `target-data_utils.R`: function used to extract, process and standardized
        the target-data.
     - `target-data.R`: script using the utils function to extract, process,
        standardized and write the target-data output file in the expected
        folder.
 
-- Validation: functions called and used in the automatic validation of PR
+- Validation: R functions called and used in the automatic validation of PR
+
+- Vaccination Coverage: python code to download COVID-19 vaccination 
+  coverage data from data.cdc.gov 
