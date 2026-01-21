@@ -40,6 +40,8 @@ column_selection <- function(raw, pathogen = c("COVID", "Influenza", "RSV"),
   # Select Admissions data
   sel_col <- grep("(\\ |\\.)Admissions", colnames(raw), value = TRUE)
   sel_col <- grep("Change|100(.|,)000", sel_col, value = TRUE, invert = TRUE)
+  sel_col <- grep("Cumulative Seasonal", sel_col, value = TRUE,
+                  invert = TRUE)
   # Select only pathogen of interest
   sel_col <- grep(paste(pathogen, collapse = "|"), sel_col, value = TRUE,
                   ignore.case = TRUE)
@@ -48,8 +50,8 @@ column_selection <- function(raw, pathogen = c("COVID", "Influenza", "RSV"),
   if (hosp_report) {
     sel_col_report <- grep("reporting", sel_col, value = TRUE,
                            ignore.case = TRUE)
-    sel_col_report <- grep(hosp_report_unit, sel_col_report, value = TRUE,
-                           ignore.case = TRUE)
+    sel_col_report <- grep(hosp_report_unit, sel_col_report,
+                           value = TRUE, ignore.case = TRUE)
     sel_col_report <- grep("pediatric|adult|(A|a)bove", sel_col_report,
                            value = TRUE, ignore.case = TRUE, invert = TRUE)
   }
