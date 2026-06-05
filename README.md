@@ -453,7 +453,7 @@ Sunday, June 8, 2025, to Saturday, June 5, 2027.
 | Scenario D. Optimistic coverage, annual immunization                           | OptCov_AnnualVax       | D-2026-05-11  |
 | Scenario E. Optimistic coverage, semi-annual immunization for high-risk        | OptCov_SemiannualHRVax | E-2026-05-11  |
 
--   **Due date**: June 29, 2029
+-   **Due date**: June 29, 2026
 
 -   **End date for fitting data**: Saturday June 6, 2026 (no later 
 	than Sat June 6, no earlier than Sat May 30)
