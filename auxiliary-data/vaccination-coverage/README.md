@@ -28,6 +28,10 @@ with the associated population size (from
 [2024 Census](https://www.census.gov/data/datasets/time-series/demo/popest/2020s-state-detail.html) data). 
 The data are expressed by epiweek (week starting Sunday) and scenario.
 
+An illustration of the five scenarios vaccination curves for all age group at
+national level is available in a [national_vaxcurve_r20](./national_vaxcurve_r20.png)
+PNG file.
+
 ### Source
 
 COVID-19 coverage: adults data are based on 2025-2026 
