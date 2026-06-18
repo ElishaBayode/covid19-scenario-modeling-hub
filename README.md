@@ -225,8 +225,10 @@ in the Appendix.
 
 #### **Vaccination Coverage**
 
-Vaccine coverage curves will be provided for all scenarios and will be extrapolated 
-from the [2025-26 data](https://www.cdc.gov/covidvaxview/weekly-dashboard/adult-vaccination-coverage.html).
+Vaccine coverage curves are available in the 
+[auxiliary-data/vaccination-coverage](./auxiliary-data/vaccination-coverage) folder
+for all scenarios and will be extrapolated from the 
+[2025-26 data](https://www.cdc.gov/covidvaxview/weekly-dashboard/adult-vaccination-coverage.html).
 
 
 *No recommendation (scenario A)*: There is no recommendation to get additional booster 
