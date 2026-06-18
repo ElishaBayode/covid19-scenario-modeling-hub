@@ -18,8 +18,8 @@ For Scenario B and D:
 
 For Scenario C and E: 
 - season 2025-2026: fall vaccine campaign operates from mid-August 2025 to mid-February 2026 
-for all age groups. A second campaign for high-risk groups and 65+ starts mid-February 20026 
-to mid-August 2026 corresponding to 0.5 \* coverage of the main campaign 
+for all age groups. A second campaign for high-risk groups and 65+ starts mid-February 2026 
+to mid-August 2026 corresponding to 0.5 \* coverage of the 2026-2027 campaign 
 - season 2026-2027: same as 2025-2026 fall vaccination data, shifted by a year.
 
 The data is available at state and national level, for multiple age groups 
