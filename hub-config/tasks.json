@@ -252,7 +252,7 @@
         {
           "task_ids": {
             "origin_date": {
-              "required": ["2025-06-08"],
+              "required": ["2026-06-08"],
               "optional": null
             },
              "scenario_id": {
@@ -361,7 +361,7 @@
         {
           "task_ids": {
             "origin_date": {
-              "required": ["2025-04-27"],
+              "required": ["2026-06-08"],
               "optional": null
             },
              "scenario_id": {
