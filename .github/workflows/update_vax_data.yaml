@@ -1,0 +1,45 @@
+name: Download COVID-19 Vaccine Coverage
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: '0 9 * * 1'
+
+jobs:
+  update-rsv-data:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 1
+          sparse-checkout: |
+              .github
+              src
+              auxiliary-data
+
+      - name: Setup Python
+        uses: actions/setup-python@v3
+        with:
+          python-version: '3.10'
+
+      - name: Install dependencies
+        run: pip install -r src/requirements.txt
+
+      - name: Run Python
+        run: |
+         python src/vax_coverage.py
+
+      - name: Commit
+        run: |
+          git config user.name Github-Actions
+          git config user.email "<>"
+          if [ -n "$(git status --porcelain)" ]; then
+            git add .
+            git commit -m "Update vax coverage $(date)"
+            git push
+            echo "Vax Coverage updated";
+          else
+              echo "no updates";
+          fi

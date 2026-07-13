@@ -1,5 +1,5 @@
 {
-    "schema_version":"https://raw.githubusercontent.com/hubverse-org/schemas/main/v5.0.0/admin-schema.json",
+    "schema_version":"https://raw.githubusercontent.com/hubverse-org/schemas/main/v6.0.0/admin-schema.json",
     "name": "COVID-19 Scenario Modeling Hub",
     "maintainer": "COVID-19 Scenario Modeling Hub Coordination Team",
     "contact": {
@@ -12,6 +12,5 @@
         "name": "covid19-scenario-modeling-hub"
     },
     "file_format":["parquet"],
-    "timezone": "US/Eastern",
-    "model_output_dir": "model-output"
+    "timezone": "US/Eastern"
 }

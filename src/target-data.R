@@ -113,7 +113,8 @@ arch_files <-
 file.copy(old_files, arch_files)
 
 # Write output -----------------------------------------------------------------
-write.csv(rbind(df_death, df_nhsn), "target-data/time-series.csv",
+write.csv(rbind(df_death, df_nhsn),
+          "target-data/time-series.csv",
           row.names = FALSE)
 
 write.csv(rbind(df_death, df_nhsn),

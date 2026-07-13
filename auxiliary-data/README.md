@@ -26,7 +26,7 @@ containing the information to add.
 ## Vaccination Coverage
 
 The folder [vaccination-coverage/](./vaccination-coverage/) contains round specific
-vaccination coverage data.
+vaccination coverage data and observed vaccination coverage data
 
 The folder contains a [README](./vaccination-coverage/README.md) file with detailed 
 information for each file.
