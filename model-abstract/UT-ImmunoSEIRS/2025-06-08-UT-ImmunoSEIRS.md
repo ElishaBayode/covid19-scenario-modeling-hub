@@ -34,7 +34,7 @@ Natural infection contributes to boosting infection-derived immunity, with immun
 ## Is vaccination assumed to prevent infection and/or transmissibility?
 Yes. Vaccination reduces susceptibility to infection through vaccine effectiveness against infection and indirectly reduces transmission by decreasing the number of susceptible individuals who become infected. Vaccination also independently reduces the probability of hospitalization and death among infected individuals through vaccine effectiveness against severe disease.
 
-##How is re-vaccination of individuals handled in scenarios where high-risk individuals can be vaccinated twice a year (eg, is a spring dose only given to individuals who had a prior fall dose)?
+## How is re-vaccination of individuals handled in scenarios where high-risk individuals can be vaccinated twice a year (eg, is a spring dose only given to individuals who had a prior fall dose)?
 High-risk individuals eligible for the second annual vaccination are assumed to receive an additional vaccine dose regardless of whether they received the fall vaccination. The second dose is implemented as an additional increase in vaccine-derived immunity according to the specified coverage for the spring campaign (50% of the first-dose coverage), without requiring prior receipt of the fall dose.
 
 ## Are vaccination curves used as provided, or was there any adjustment made?
