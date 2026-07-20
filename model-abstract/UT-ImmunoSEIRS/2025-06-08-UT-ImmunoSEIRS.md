@@ -37,7 +37,7 @@ Yes. Vaccination reduces susceptibility to infection through vaccine effectivene
 ##How is re-vaccination of individuals handled in scenarios where high-risk individuals can be vaccinated twice a year (eg, is a spring dose only given to individuals who had a prior fall dose)?
 High-risk individuals eligible for the second annual vaccination are assumed to receive an additional vaccine dose regardless of whether they received the fall vaccination. The second dose is implemented as an additional increase in vaccine-derived immunity according to the specified coverage for the spring campaign (50% of the first-dose coverage), without requiring prior receipt of the fall dose.
 
-##Are vaccination curves used as provided, or was there any adjustment made?
+## Are vaccination curves used as provided, or was there any adjustment made?
 Yes.
 
 ##Was there any adjustment made to scenario specifications beyond vaccine coverage?
