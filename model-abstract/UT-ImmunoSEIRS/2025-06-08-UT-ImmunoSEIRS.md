@@ -40,7 +40,7 @@ High-risk individuals eligible for the second annual vaccination are assumed to 
 ## Are vaccination curves used as provided, or was there any adjustment made?
 Yes.
 
-##Was there any adjustment made to scenario specifications beyond vaccine coverage?
+## Was there any adjustment made to scenario specifications beyond vaccine coverage?
 No.
 
 ## How are projections generated for the retrospective period (June 2025-May 2026)?
