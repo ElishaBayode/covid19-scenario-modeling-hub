@@ -43,7 +43,7 @@ Yes.
 ##Was there any adjustment made to scenario specifications beyond vaccine coverage?
 No.
 
-##How are projections generated for the retrospective period (June 2025-May 2026)?
+## How are projections generated for the retrospective period (June 2025-May 2026)?
 The model was first calibrated to observed hospitalization and mortality data from October 26, 2024 through end May, 2026. After the end of May 2026, projections are generated using the calibrated model parameters under each of the five vaccination scenarios. The calibration is based on scenario B. Then all other scenarios use those calibrated parameters in the retrospective period as well. 
 
 ## Describe the process used to set or calibrate disease severity, ie P(hosp given current infection) and P(death given current infection) details. What are the datasets used for calibration of the death targets?
